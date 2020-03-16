@@ -12,7 +12,11 @@
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 
-                <li ><a href="index.html">Home</a></li>
+                <li >
+                    <router-link  :to="{name:'Home'}">
+                        Home
+                    </router-link>
+                </li>
                 <li>
                     <router-link  :to="{name:'Oficina'}">
                         Oficina

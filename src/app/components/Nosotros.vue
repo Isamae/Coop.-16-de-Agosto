@@ -14,8 +14,8 @@
                         </div>
                         <div class="col-12 col-md-7">
                             <div class="text-center style-imagen-n" >
-                                <h2>¿Que es Biglieto?</h2>
-                                <p>Somos una empresa tecnológica que optimiza, automatiza y moderniza el transporte terrestre, mediante una plataforma ágil y segura. 
+                                <h2>¿Quines Somos?</h2>
+                                <p>Somos una empresa de transporte que brinda su servicio con la mayor calidad de servicio. 
                                 </p>
                                 <p>"Perder tu tiempo no es una opcion"</p>
                             </div>
