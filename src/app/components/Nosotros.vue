@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="section-bg">
-            <div id="container-equipo" class="container" >
+            <div id="container-equipo" class="container py-4" >
                 <div class="section-title  mx-auto">
                     <p>Coop. de Transporte de Pasajeros 16 de Agosto</p>
                 </div>

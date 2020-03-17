@@ -1,9 +1,8 @@
 <template>
     <div>
-        <section id="contact" class="contact">
+        <section id="contact" class="contact py-4">
             <div class="container ">
-
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>Contactanos</h2>
                     <p>Tienes alguna sugerencia o denuncia comunicate</p>
                 </div>
