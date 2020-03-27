@@ -1,109 +1,52 @@
 <template>
-    <div>
-        <nav class="navbar navbar-light bg-light">
-            <a href="/" class="navbar-brand">{{user.nick}}</a>  
-            <button style="p" @click="logout">Cerrar Sesion</button>          
-        </nav>
-        <div class="container">
-            <section>
-                <div class="row">
-                    <div class="col-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <form @submit.prevent="enviarRespuesta">
-                                    <div class="form-group">
-                                        <input v-model="respuesta.titulo" type="text" placeholder="Insertar Respuesta Name" class="form-control" required>
+    <div style="padding-top:30px;height:100%;">
+        <section style="margin:10px">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr >
+                                <th cope="col">Nombre</th>
+                                <th cope="col">Email</th>
+                                <th cope="col">Eliminar</th>
+                                <th cope="col">Mensaje</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            <tr v-for="(msj, k) of mensajes"  :key="k">
+                                <th scope="row"><p>{{msj.nombre}}</p></th>
+                                <td><p>{{msj.email}}</p> </td>
+                                <td>
+                                    <button @click="deleteMsj(msj._id)" type="button" class="btn btn-primary btn-sm">
+                                        Eliminar
+                                    </button>
+                                </td>
+                                <td>
+                                    <button @click="editMsj(msj._id)" type="button" class="btn btn-secondary btn-sm">
+                                        Ver
+                                    </button>
+                                </td>
+                            </tr>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea v-model="respuesta.descripcion" name="" id="" cols="30" rows="10" class="form-control" placeholder="Inserte la Respuesta" required></textarea>
-                                    </div>
-                                    <template v-if="edit ===false">
-                                        <button class="btn btn-primary btn-block">Enviar</button>
-                                    </template>
-                                    <template v-else>
-                                        <button class="btn btn-primary btn-block">Actualizar</button>
-                                    </template>
+                        </tbody>
 
-                                </form>
-                            </div>
+                    </table>
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form >
+                                <div class="form-group">
+                                    <textarea v-model="mensaje.texto" name="" id="" cols="30" rows="10" class="form-control" placeholder="" required></textarea>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Mensaje</th>
-                                    <th>Descripcion</th>
-                                    <th>idMensaje</th>
-                                </tr>
-                                
-                            </thead>
-                            <tbody>
-                                <tr v-for="resp of respuestas">
-                                    <td>{{resp.titulo}}</td>
-                                    <td>{{resp.descripcion}}</td>
-                                    <td>{{resp.idMensaje}}</td>
-                                    <td>
-                                        <button @click="deleteRes(resp._id)" class="btn btn-danger">
-                                            Eliminar
-                                        </button>
-                                        <button @click="editRes(resp._id)" class="btn btn-secondary">
-                                            Editar
-                                        </button>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-                    </div>
                 </div>
-            </section>
-            <section>
-                <div class="row">
-                    <div class="col-2">
-                        <div class="card">
-                            <div class="card-body">
-                                <form >
-                                    <div class="form-group">
-                                        <textarea v-model="mensaje.texto" name="" id="" cols="30" rows="10" class="form-control" placeholder="" required></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Email</th>
-                                </tr>
-                                
-                            </thead>
-                            <tbody>
-                                <tr v-for="(msj) of mensajes">
-                                    <td>{{msj.nombre}}</td>
-                                    <td>{{msj.email}}</td>
-                                    <td>
-                                        <button @click="deleteMsj(msj._id)" class="btn btn-danger">
-                                            Eliminar
-                                        </button>
-                                        <button @click="editMsj(msj._id)" class="btn btn-secondary">
-                                            Ver
-                                        </button>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
 </template>
 <style scoped>
@@ -141,13 +84,8 @@
     }
 </style>
 <script>
-    class Respuesta{
-        constructor(titulo, descripcion, idMensaje){
-            this.titulo = titulo;
-            this.descripcion = descripcion;
-            this.idMensaje = idMensaje;
-        }
-    }
+    import {mapMutations} from 'vuex'
+    
     class Mensaje{
         constructor(nombre, texto, email){
             this.nombre = nombre;
@@ -166,8 +104,6 @@
         name: "Panel",
         data(){
             return{
-                respuesta: new Respuesta(),
-                respuestas:[],
                 mensajes:[],
                 mensaje:new Mensaje(),
                 edit:false,
@@ -177,71 +113,9 @@
         },
         created(){
             this.getUserData()  
-            this.getRespuestas();
             this.getMensajes();
         },
         methods: {
-            enviarRespuesta(){
-                if(this.edit ==false){
-                    const uri = "/respuesta"
-                    this.axios.post(uri, this.respuesta)
-                    .then(res => {
-                        this.getRespuestas();
-                    })
-                    .catch(err => console.log(err));
-                    this.respuesta = new Respuesta();
-                }
-                else{
-                    const uri = "/respuesta/"+this.idMsjEdit
-                    this.axios.put(uri, this.respuesta)
-                    .then(res => {
-                        this.edit = false;
-                        this.idMsjEdit = '';
-                        this.getRespuestas();
-                    })
-                    .catch(err => console.log(err));
-                    this.respuesta = new Respuesta();
-                }
-                
-
-            },
-            getRespuestas(){
-                const uri = "/respuesta"
-                this.axios.get(uri)
-                .then(res => {
-                    this.respuestas = res.data;
-                })
-                .catch(err => console.log(err));
-            }, 
-            deleteRes(id){
-                const response = confirm('Estas Seguro de Eliminar este Mensaje');
-                if(response){
-                    const uri = "/respuesta/"
-                    this.axios.delete(uri+id)
-                    .then(res =>{
-                        //this.respuestas.splice(id,1);
-                        this.getRespuestas();
-                        this.edit=false;
-                        this.idMsjEdit = "";
-                        this.respuesta = new Respuesta()
-                    })
-                    .catch(err => console.log(err));
-                }else{
-                    return;
-                }
-            },
-            editRes(id){
-
-                const uri = "/respuesta/"
-                this.axios.get(uri+id)
-                .then(res => {
-                    this.respuesta = new Respuesta(res.data.titulo, res.data.descripcion,"idM");
-                    this.edit = true;
-                    this.idMsjEdit = res.data._id;
-                })
-                .catch(err => console.log(err));
-                
-            },
             getMensajes(){
                 const uri = "/mensaje"
                 this.axios.get(uri)
@@ -291,8 +165,13 @@
                     this.$router.push("/")
                     
                 })
-            }
-                    
+            },
+            ...mapMutations(['setNavVisible','setCarruselVisible'])
+                  
         },
+        mounted(){
+            this.setCarruselVisible(1);
+            this.setNavVisible(1);
+        }
     }
 </script>

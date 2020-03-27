@@ -1,8 +1,8 @@
 <template lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <div class="body">
-        <div class="container" >
-            <div class="row">
-                <div class="col-3" style="margin-right: auto !important;margin-left: auto !important; float:none  !important;">
+    <div class="body vertical-center">
+        <div class="container">
+            <div class="row my-auto align-self-center">
+                <div class="col-12 col-md-4 mx-auto " >
                     <div class="card card-signin my-5">
                         <div class="card-body">
                             <h5 class="card-title text-center">Iniciar Sesión</h5>
@@ -23,6 +23,7 @@
     </div>
 </template>
  <script>
+ import {mapMutations} from 'vuex'
  export default {
      name: "Login", 
      data(){
@@ -42,27 +43,36 @@
                 var user = { id:1, name:this.username ,session:'25j_7Sl6xDq2Kc3ym0fmrSSk2xV2XkUkX' };
                 this.$cookies.set("user",user); 
                 this.$emit('loggedIn')
+                this.setNavVisible(1)
                 this.$router.push("/Panel")
             })     
             .catch((errors) => {    
             })  
         },
+        setNvisible(dato){
+            this.setCarruselVisible(dato)
+        },
+        ...mapMutations(['setNavVisible','setCarruselVisible'])
         
+     },
+     mounted(){
+         this.setCarruselVisible(1);
      }
  }
  </script>
 
  <style scoped>
     :root {
-    --input-padding-x: 1.5rem;
-    --input-padding-y: .75rem;
+        --input-padding-x: 1.5rem;
+        --input-padding-y: .75rem;
     }
 
     .body {
         background: #007bff;
         background: linear-gradient(to right, #0062E6, #33AEFF);
         overflow: hidden;
-        height:100%
+        height:100%;
+        width: 100%;
     }
 
     .card-signin {
@@ -131,5 +141,12 @@
         .form-label-group>label {
             display: none;
         }
+    }
+    .vertical-center {
+        min-height: 100%;  
+        min-height: 100vh; 
+
+        display: flex;
+        align-items: center;
     }
  </style>

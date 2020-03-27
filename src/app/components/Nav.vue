@@ -12,33 +12,46 @@
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 
-                <li >
+                <li  @click="setVcarrusel(0)">
                     <router-link  :to="{name:'Home'}">
                         Home
                     </router-link>
                 </li>
-                <li>
-                    <router-link  :to="{name:'Oficina'}">
+                <li @click="setVcarrusel(0)">
+                    <router-link   :to="{name:'Oficina'}" >
                         Oficina
                     </router-link>
                 </li>
-                <li>
-                    <router-link  :to="{name:'Rutas'}">
+                <li @click="setVcarrusel(0)">
+                    <router-link   :to="{name:'Rutas'}" >
                         Rutas
                     </router-link>
                 </li>
-                <li>
-                    <router-link  :to="{name:'Nosotros'}">
+                <li @click="setVcarrusel(0)">
+                    <router-link   :to="{name:'Nosotros'}">
                         Nosotros
                     </router-link>
                 </li>
-                <li>
-                    <router-link  :to="{name:'Contacto'}">
+                <li @click="setVcarrusel(0)">
+                    <router-link   :to="{name:'Contacto'}">
                         Contactos
                     </router-link>
                 </li>
-
-            <li class="get-started"><a href="#about">Login</a></li>
+                <template v-if="navVisible==0">
+                    <li @click="setVcarrusel(1)" class="get-started">
+                        <router-link  :to="{name: 'Login'}" >
+                            Login
+                        </router-link>
+                    </li>
+                </template>
+                <template v-else>
+                    <li @click="setNvisible(0)" class="get-started">
+                        <a>
+                            Salir
+                        </a>
+                    </li>
+                </template>
+                
             </ul>
         </nav>
         <!-- .nav-menu -->
@@ -47,7 +60,27 @@
     </header>
 </template>
 <script>
+import {mapMutations,mapState} from 'vuex'
 export default {
-    name:"Nav"
+    name:"Nav",
+    computed:{
+        ...mapState(['navVisible'])
+    },
+    methods:{
+        setVcarrusel(dato){
+            this.setCarruselVisible(dato)
+        },
+        setNvisible(dato){
+            this.axios.get("/api/logout")
+            .then(() => {
+                this.setNavVisible(dato)
+                this.setCarruselVisible(0)
+                this.$cookies.remove("user");
+                this.$router.push("/")
+                
+            })
+        },
+        ...mapMutations(['setCarruselVisible','setNavVisible'])
+    }
 }
 </script>

@@ -6,9 +6,11 @@ Vue.use(VueRouter);
 Vue.use(require('vue-cookies'))
 import VueAxios from 'vue-axios';
 import axios from 'axios';
- Vue.use(VueAxios, axios);
+import store from './store'
 
-import routes from './routes.js'
+Vue.use(VueAxios, axios);
+
+import routes from './router.js'
 
 import App from './App.vue';
 const router = new VueRouter( {
@@ -43,4 +45,4 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-new Vue(Vue.util.extend({router}, App)).$mount('#app');
+new Vue({...Vue.util.extend({router}, App),store}).$mount('#app');

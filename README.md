@@ -34,6 +34,11 @@ npm install --save body-parser cookie-session express passport passport-local(pa
 
 npm install vue-cookies --save
 
+npm i vuex
+
+
+
+
 https://www.youtube.com/watch?v=yKWQKO4XU5I&t=32s
 a la hora de desplegar en heroku cambiar las de pendencias de "devDependencies" a  "dependencies"
 
