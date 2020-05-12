@@ -4,12 +4,12 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Nuestras Rutas</h2>
-                    <p>Coop. 16 de Agosto</p>
+                    <p style="color:rgba(239,239,227,1)">Coop. 16 de Agosto</p>
                 </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div style="color:rgba(239,239,227,1)" class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-12 col-sm-6">
                         <h6>CUENCA - GUALAQUIZA</h6>
-                        <table class="table table-hover">
+                        <table class="table table-hover table-dark">
                             <thead>
                                 <tr style="font-size:16px">
                                     <th scope="col" > Hora </th>
@@ -59,9 +59,9 @@
                         </table>
                     </div>
 
-                    <div class="col-12 col-sm-6">
+                    <div style="color:rgba(239,239,227,1)" class="col-12 col-sm-6">
                         <h6>MACAS - GUALAQUIZA</h6>
-                        <table class="table table-hover">
+                        <table class="table table-hover table-dark">
                             <thead>
                                 <tr style="font-size:16px">
                                     <th scope="col" > Hora </th>

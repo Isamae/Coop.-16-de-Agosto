@@ -1,23 +1,23 @@
 <template>
     <div>
-        <div class="section-bg">
             <div id="container-equipo" class="container py-4" >
                 <div class="section-title  mx-auto">
-                    <p>Coop. de Transporte de Pasajeros 16 de Agosto</p>
+                    <p style="color:rgba(239,239,227,1)">Coop. de Transporte de Pasajeros 16 de Agosto</p>
                 </div>
                 <div class="mb-4 mx-auto row container-hover color-blanco" data-aos="fade-up" data-aos-delay="100">
                     <div class="row">
                         <div class="col-12 col-md-5">
                             <div class="d-flex justify-content-center style-imagen-n" >
-                                    <img class="" src="svg-pegado-272648x260.svg"/>
+                                    <img class="" src="16deAgosto.jpeg" style="width: 350px;">
                             </div>
                         </div>
                         <div class="col-12 col-md-7">
                             <div class="text-center style-imagen-n" >
-                                <h2>¿Quines Somos?</h2>
-                                <p>Somos una empresa de transporte que brinda su servicio con la mayor calidad de servicio. 
+                                <h2>Eslogan</h2>
+                                <p>“Más que viajar…    ...una manera de compartir”</p>
+                                <p>Somos una empresa de transporte que brinda su servicio dentro y fuera de Morona Santiago. 
                                 </p>
-                                <p>"Perder tu tiempo no es una opcion"</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -27,28 +27,27 @@
                         <div class="col-12 col-md-4 elemen-bussines">
                             <div class="text-center container-hover " >
                                 <img class="" src="svg-pegado-182.svg"/>
-                                <h3>visión</h3>
-                                <p>Ser un referente tecnológico para innovación y progreso de los sistemas y procesos de transporte.</p>
+                                <h3 >Visión</h3>
+                                <p>“Ser la cooperativa de transporte líder en la región, reconocida por su seguridad, confort, atención de calidad, responsabilidad social y constante innovación.”</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 elemen-bussines">
                             <div class="text-center container-hover " >
                                     <img class="" src="svg-pegado-152.svg"/>
-                                    <h3>propósito</h3>
-                                    <p>Ayudar a las personas a ahorrar su tiempo</p>
+                                    <h3>Misión</h3>
+                                    <p>“Somos una cooperativa de transporte de pasajeros y encomiendas, que brinda un servicio de manera ágil, responsable y oportuna; con amabilidad, respeto, seguridad y confort; contribuyendo con el desarrollo social y económico de nuestra zona de influencia."</p>
                             </div>  
                         </div>
                         <div class="col-12 col-md-4 elemen-bussines">
                             <div class="text-center container-hover " >
                                     <img class="" src="svg-pegado-170.svg"/>
-                                    <h3>valores</h3>
+                                    <h3>Valores</h3>
                                     <p>Somos honestos, responsables, sinceros, altruistas, colaborativos, respetuosos, y procuramos el trabajo en equipo</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
          
     </div>
 </template>
@@ -65,6 +64,9 @@
         #container-equipo{
             padding-top: 0% !important;
         }
+        .style-imagen-n img{
+            width: 200px !important; 
+        }
     }
     /* Mini tablet*/
     @media (min-width: 415px) and (max-width: 600px)
@@ -72,11 +74,17 @@
         #container-equipo>div{
             width: 100% !important;  
         }
+        .style-imagen-n img{
+            width: 200px !important; 
+        }
     }
     @media (min-width: 601px) and (max-width: 768px)
     {
         #container-equipo>div{
             width: 100% !important;  
+        }
+        .style-imagen-n img{
+            width: 250px !important; 
         }
     }
     /* tablet*/

@@ -3,60 +3,61 @@
     <header id="header" class="fixed-top">
         <div class="container-fluid d-flex">
 
-        <div class="logo mr-auto">
-            <h1 class="text-light"><a href="index.html"><span>Coop. 16 de Agosto</span></a></h1>
-            <!--  si usted prefiere puede usar el  logo de la empresa con el siguiente condigo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-        </div>
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="index.html"><span>Coop. 16 de Agosto</span></a></h1>
+                <!--  si usted prefiere puede usar el  logo de la empresa con el siguiente condigo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
 
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                
-                <li  @click="setVcarrusel(0)">
-                    <router-link  :to="{name:'Home'}">
-                        Home
-                    </router-link>
-                </li>
-                <li @click="setVcarrusel(0)">
-                    <router-link   :to="{name:'Oficina'}" >
-                        Oficina
-                    </router-link>
-                </li>
-                <li @click="setVcarrusel(0)">
-                    <router-link   :to="{name:'Rutas'}" >
-                        Rutas
-                    </router-link>
-                </li>
-                <li @click="setVcarrusel(0)">
-                    <router-link   :to="{name:'Nosotros'}">
-                        Nosotros
-                    </router-link>
-                </li>
-                <li @click="setVcarrusel(0)">
-                    <router-link   :to="{name:'Contacto'}">
-                        Contactos
-                    </router-link>
-                </li>
-                <template v-if="navVisible==0">
-                    <li @click="setVcarrusel(1)" class="get-started">
-                        <router-link  :to="{name: 'Login'}" >
-                            Login
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    
+                    <li  @click="setVcarrusel(0)">
+                        <router-link  :to="{name:'Home'}">
+                            Home
                         </router-link>
                     </li>
-                </template>
-                <template v-else>
-                    <li @click="setNvisible(0)" class="get-started">
-                        <a>
-                            Salir
-                        </a>
+                    <li @click="setVcarrusel(0)">
+                        <router-link   :to="{name:'Oficina'}" >
+                            Oficina
+                        </router-link>
                     </li>
-                </template>
-                
-            </ul>
-        </nav>
-        <!-- .nav-menu -->
+                    <li @click="setVcarrusel(0)">
+                        <router-link   :to="{name:'Rutas'}" >
+                            Rutas
+                        </router-link>
+                    </li>
+                    <li @click="setVcarrusel(0)">
+                        <router-link   :to="{name:'Nosotros'}">
+                            Nosotros
+                        </router-link>
+                    </li>
+                    <li @click="setVcarrusel(0)">
+                        <router-link   :to="{name:'Contacto'}">
+                            Contactos
+                        </router-link>
+                    </li>
+                    <template v-if="navVisible==0">
+                        <li @click="setVcarrusel(1)" class="get-started text-center">
+                            <router-link  :to="{name: 'Login'}" >
+                                Login
+                            </router-link>
+                        </li>
+                    </template>
+                    <template v-else>
+                        <li @click="setNvisible(0)" class="get-started">
+                            <a>
+                                Salir
+                            </a>
+                        </li>
+                    </template>
+                    
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
 
         </div>
+        
     </header>
 </template>
 <script>
@@ -84,3 +85,8 @@ export default {
     }
 }
 </script>
+<style >
+    li{
+        color: aliceblue;
+    }
+</style>
