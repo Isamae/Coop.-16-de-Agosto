@@ -8,7 +8,7 @@
                             <h5 class="card-title text-center">Iniciar Sesión</h5>
                             <form class="form-signin text-center" @submit.prevent="login" >
                                 <div class="form-label-group">
-                                    <input  type="text" id="username" class="form-control" placeholder="Usuario" v-model="username" required autofocus>
+                                    <input  type="text" id="nick" class="form-control" placeholder="Usuario" v-model="nick" required autofocus>
                                 </div>
                                 <div class="form-label-group" >
                                     <input type="password" class="form-control" placeholder="Contraseña" v-model="password" required>
@@ -28,25 +28,26 @@
      name: "Login", 
      data(){
          return{
-             username:'',
+             nick:'',
              password:'',
          }
      },
      methods:{
          login(){
             let data = {    
-                name: this.username,    
+                name: this.nick,    
                 password: this.password
             }
              this.axios.post("/api/login", data)    
             .then((response) => {
-                var user = { id:1, name:this.username ,session:'25j_7Sl6xDq2Kc3ym0fmrSSk2xV2XkUkX' };
+                var user = { id:1, name:this.nick ,session:'25j_7Sl6xDq2Kc3ym0fmrSSk2xV2XkUkX' };
                 this.$cookies.set("user",user); 
                 this.$emit('loggedIn')
                 this.setNavVisible(1)
                 this.$router.push("/Panel")
             })     
-            .catch((errors) => {    
+            .catch((errors) => {   
+                console.log(errors) 
             })  
         },
         setNvisible(dato){

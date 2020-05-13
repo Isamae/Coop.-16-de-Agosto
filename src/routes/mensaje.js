@@ -11,6 +11,7 @@ router.get('/',(req, res) => {
         }
     });
 });
+
 router.get('/:id',(req, res) => {
 
     Mensaje.findById(req.params.id, function ( err, mensaje){
@@ -40,12 +41,13 @@ router.put('/:id',(req , res) => {
             mensaje.nombre = req.body.nombre;
             mensaje.email = req.body.email;
             mensaje.texto = req.body.texto;
+            mensaje.asunto = req.body.asunto;
             mensaje.save()
                 .then(mensaje => {
                     res.json('Update complete')
                 })
                 .catch(err => {
-                    res.status(400).send('no se pudo actulizar')
+                    res.status(400).send('no se pudo actualizar')
                 });
         }
     });

@@ -10,7 +10,6 @@ var history = require('connect-history-api-fallback');
 
 const itemRoutes = require('./routes/user.js');
 const mensajeRoutes = require('./routes/mensaje.js');
-const respuestaRoutes = require('./routes/respuesta.js');
 const logueado = require('./controller/autentificacion.js');
 
 const mongoose  = require('mongoose');
@@ -51,7 +50,6 @@ app.use(passport.session());
 //Routes
 app.use('/user',itemRoutes);
 app.use('/mensaje',mensajeRoutes);
-app.use('/respuesta',respuestaRoutes);
 app.use('/api',logueado);
 
 //Static File

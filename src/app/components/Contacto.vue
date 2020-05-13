@@ -32,35 +32,35 @@
 
                     </div>
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                            <div class="validate"></div>
+                        <form v-on:submit = "sendMensaje" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                <label for="name">Nombre</label>
+                                <input v-model="mensaje.nombre" type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                <label for="name">Email</label>
+                                <input v-model="mensaje.email" type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                            <label for="name">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                            <div class="validate"></div>
+                            <div class="form-group">
+                                <label for="name">Objetivo</label>
+                                <input v-model="mensaje.asunto" type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Objetivo</label>
-                            <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Mensaje</label>
-                            <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Tu mensaje fue enviado. Gracias!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Enviar</button></div>
+                            <div class="form-group">
+                                <label for="name">Mensaje</label>
+                                <textarea v-model="mensaje.texto" class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Tu mensaje fue enviado. Gracias!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Enviar</button></div>
                         </form>
                     </div>
                 </div>
@@ -68,3 +68,37 @@
         </section>
     </div>
 </template>
+ <script>
+ export default {
+    name: 'home-page',
+    data() {
+        return {
+            mensaje:{
+                nombre:'',
+                email:'',
+                texto:'',
+                asunto:'',
+            }
+        }
+    },
+     methods: {
+        
+        sendMensaje(){
+            if(this.mensaje.nombre=="" || this.mensaje.email=="" || this.mensaje.texto=="" || this.mensaje.asunto=="" ){
+                alert("Ingrese los datos");
+            }
+            else{
+                const uri = "/mensaje"
+                this.axios.post(uri, this.mensaje)
+                .then(res => {
+                    alert(res.data.mensaje);
+                    this.$router.replace({name:"Home"});
+                })
+                .catch(err => console.log(err));
+            }
+            
+         }
+     }
+     
+ }
+ </script>
