@@ -8,23 +8,21 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <!-- ======= Hero Section ======= -->
                     <section id="hero" class="d-flex align-items-center">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
                                     <h1>Mejoramos nuestro servicio con venta de pasajes online en </h1>
-                                    <a href="https://www.isyplus.com" style="color:rgba(239,239,227,1)">www.isyplus.com</a>
+                                    <a href="https://www.isyplus.com" style="color:rgba(239,239,227,1)"> <i class="bx bx-rocket"></i> <u>www.isyplus.com</u> </a>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus.png" class="img-fluid animated" alt="">
+                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>
-                    </section><!-- End Hero -->
+                    </section>
                 </div>
                 <div class="carousel-item">
-                    <!-- ======= Hero Section ======= -->
                     <section id="hero" class="d-flex align-items-center">
                         <div class="container">
                             <div class="row">
@@ -33,14 +31,13 @@
                                     <h2>dentro y fuera de Morona Santiago</h2>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus.png" class="img-fluid animated" alt="">
+                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>
-                    </section><!-- End Hero -->
+                    </section>
                 </div>
                 <div class="carousel-item">
-                    <!-- ======= Hero Section ======= -->
                     <section id="hero" class="d-flex align-items-center">
                         <div class="container">
                             <div class="row">
@@ -49,11 +46,11 @@
                                     <h2>en el cantón Gualaquiza</h2>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus.png" class="img-fluid animated" alt="">
+                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>
-                    </section><!-- End Hero -->
+                    </section>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">

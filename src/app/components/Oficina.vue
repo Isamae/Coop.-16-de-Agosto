@@ -9,7 +9,7 @@
             <div class="row row-cols-1 row-cols-md-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/gualaquiza.jpg" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Oficina Gualaquiza</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2780156</p>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/cuenca.jpg" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Oficina Cuenca</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2838703</p>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/macas.jpg" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Oficina Macas</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2525818; 07-2525949</p>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/loja.jpg" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Oficina Loja</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2724100</p>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/pangui.png" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Oficina El Pangui</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2310414</p>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col mb-4">
                     <div class="card">
-                        <img src="img/team/team-1.jpg" class="card-img-top" alt="img/team/team-1.jpg">
+                        <img src="img/oficinas/sede.jpg" class="card-img-top" alt="img/team/team-1.jpg">
                         <div class="card-body">
                             <h5 class="card-title" style="margin:2px">Sede Social</h5>
                             <p style="font-size: 15px; margin:1px"><strong>Telefono: </strong>07-2780846</p>
