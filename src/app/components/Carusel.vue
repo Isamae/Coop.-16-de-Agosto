@@ -31,7 +31,7 @@
                                     <h2>dentro y fuera de Morona Santiago</h2>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
+                                    <img src="img/camion.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                                     <h2>en el cantón Gualaquiza</h2>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
+                                    <img src="img/camion.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>

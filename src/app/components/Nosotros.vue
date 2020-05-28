@@ -4,17 +4,19 @@
             <div class="section-title  mx-auto">
                 <p style="color:rgba(239,239,227,1)">Coop. de Transporte de Pasajeros 16 de Agosto</p>
             </div>
-            <div class="mb-4 container-hover" data-aos="fade-up" data-aos-delay="100" style="">
-                <div style="background-image: url('img/marco3.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;  width: 100%;">
+            <div class="mb-4 container-hover elemen-bussines" data-aos="fade-up" data-aos-delay="100" style="">
+                <div style="background-image: url('img/marco.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;  width: 100%;">
                     <div class="row mb-5">
                          <div class="col-12 col-md-5 mx-auto my-auto" style="padding:0">
                             <div class="d-flex justify-content-center style-imagen-n" >
-                                    <img class="" src="16deAgosto.jpeg" style="width: 350px;">
+                                    <img class="" src="16deAgosto.png" style="width: 350px;">
                             </div>
                         </div>
                         <div class="col-12 col-md-7 mx-auto my-auto" style="padding:0">
                             <div class="text-center style-imagen-n" >
-                                <p>“Más que viajar </p> <img class="" src="svg-pegado-170.svg"/> <p> una manera de compartir”</p>
+                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;">“Más que viajar </p> 
+                                <img class="" src="svg-pegado-170.svg"/> 
+                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;"> una manera de compartir”</p>
                             </div>
                         </div>
                     </div>
@@ -23,21 +25,21 @@
             <div class="mb-4 mx-auto row" data-aos="fade-up" data-aos-delay="100">
                 <div class="row">
                     <div class="col-12 col-md-4 elemen-bussines">
-                        <div class="text-center container-hover " style="background-image: url('img/marco3.jpg');" >
+                        <div class="text-center container-hover " style="background-image: url('img/marco5.png');" >
                             <img class="" src="svg-pegado-182.svg"/>
                             <h3 >Visión</h3>
                             <p>“Ser la cooperativa de transporte líder en la región, reconocida por su seguridad, confort, atención de calidad, responsabilidad social y constante innovación.”</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 elemen-bussines">
-                        <div class="text-center container-hover " style="background-image: url('img/marco3.jpg');">
+                        <div class="text-center container-hover " style="background-image: url('img/marco5.png');">
                                 <img class="" src="svg-pegado-152.svg"/>
                                 <h3>Misión</h3>
                                 <p>“Somos una cooperativa de transporte de pasajeros y encomiendas, que brinda un servicio de manera ágil, responsable y oportuna; con amabilidad, respeto, seguridad y confort; contribuyendo con el desarrollo social y económico de nuestra zona de influencia."</p>
                         </div>  
                     </div>
                     <div class="col-12 col-md-4 elemen-bussines">
-                        <div class="text-center container-hover " style="background-image: url('img/marco3.jpg');">
+                        <div class="text-center container-hover " style="background-image: url('img/marco5.png');">
                                 <img class="" src="svg-pegado-170.svg"/>
                                 <h3>Valores</h3>
                                 <p>Somos honestos, responsables, sinceros, altruistas, colaborativos, respetuosos, y procuramos el trabajo en equipo</p>
