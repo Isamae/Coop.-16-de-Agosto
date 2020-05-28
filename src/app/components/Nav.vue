@@ -45,7 +45,7 @@
                         </li>
                     </template>
                     <template v-else>
-                        <li @click="setNvisible(0)" class="get-started">
+                        <li @click="setNvisible(0)" class="get-started text-center">
                             <a>
                                 Salir
                             </a>

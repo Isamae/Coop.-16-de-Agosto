@@ -3,7 +3,7 @@
         <section style="margin:10px">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-dark">
                         <thead>
                             <tr >
                                 <th cope="col">Nombre</th>
@@ -18,12 +18,12 @@
                                 <th scope="row"><p>{{msj.nombre}}</p></th>
                                 <td><p>{{msj.email}}</p> </td>
                                 <td>
-                                    <button @click="deleteMsj(msj._id)" type="button" class="btn btn-primary btn-sm">
+                                    <button @click="deleteMsj(msj._id)" type="button" class="btn btn- btn-danger btn-sm">
                                         Eliminar
                                     </button>
                                 </td>
                                 <td>
-                                    <button @click="editMsj(msj._id)" type="button" class="btn btn-secondary btn-sm">
+                                    <button @click="editMsj(msj._id)" type="button" class="btn btn-success btn-sm">
                                         Ver
                                     </button>
                                 </td>
@@ -37,6 +37,7 @@
                 <div class="col-12 col-md-6">
                     <div class="card">
                         <div class="card-body">
+                            <h6>Asunto: {{mensaje.asunto}}</h6>
                             <form >
                                 <div class="form-group">
                                     <textarea v-model="mensaje.texto" name="" id="" cols="30" rows="10" class="form-control" placeholder="" required></textarea>
@@ -87,10 +88,11 @@
     import {mapMutations} from 'vuex'
     
     class Mensaje{
-        constructor(nombre, texto, email){
+        constructor(nombre, texto, email, asunto){
             this.nombre = nombre;
             this.texto = texto;
             this.email = email;
+            this.asunto = asunto;
         }
     }
     class User{
@@ -143,7 +145,7 @@
                 const uri = "/mensaje/"
                 this.axios.get(uri+id)
                 .then(res => {
-                    this.mensaje = new Mensaje(res.data.nombre, res.data.texto, res.data.email);
+                    this.mensaje = new Mensaje(res.data.nombre, res.data.texto, res.data.email,res.data.asunto);
                 })
                 .catch(err => console.log(err));
                 
