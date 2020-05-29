@@ -16,7 +16,7 @@
                                     <a href="https://www.isyplus.com" style="color:rgba(239,239,227,1)"> <i class="bx bx-rocket"></i> <u>www.isyplus.com</u> </a>
                                     </div>
                                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                                    <img src="img/bus16deAgosto2.png" class="img-fluid animated" alt="">
+                                    <img src="img/car/bus.png" class="img-fluid animated" alt="">
                                 </div>
                             </div>
                         </div>

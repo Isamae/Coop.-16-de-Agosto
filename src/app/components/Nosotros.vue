@@ -5,7 +5,7 @@
                 <p style="color:rgba(239,239,227,1)">Coop. de Transporte de Pasajeros 16 de Agosto</p>
             </div>
             <div class="mb-4 container-hover elemen-bussines" data-aos="fade-up" data-aos-delay="100" style="">
-                <div style="background-image: url('img/marco.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;  width: 100%;">
+                <div style="background-image: url('img/marco5.png'); background-repeat: no-repeat; background-position: center center; background-size: cover;  width: 100%;">
                     <div class="row mb-5">
                          <div class="col-12 col-md-5 mx-auto my-auto" style="padding:0">
                             <div class="d-flex justify-content-center style-imagen-n" >
@@ -14,9 +14,9 @@
                         </div>
                         <div class="col-12 col-md-7 mx-auto my-auto" style="padding:0">
                             <div class="text-center style-imagen-n" >
-                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;">“Más que viajar </p> 
-                                <img class="" src="svg-pegado-170.svg"/> 
-                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;"> una manera de compartir”</p>
+                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;">“Más que viajar 
+                                <img class="" src="svg-pegado-170.svg" style="width: 30px; height:30px;"  > 
+                                una manera de compartir”</p>
                             </div>
                         </div>
                     </div>
@@ -101,9 +101,66 @@
             </div>
             
         </section>  -->
+        <section id="gallery" class="section-padding scrollto clearfix gallery section-bg">
+            <div class="container text-center">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Galería</h2>
+                </div>
+                <div class="container">
+                    <h4 class="text-center text-lg-left mt-4 mb-0" style="font-weight: 700;">Nuestra Historia</h4>
+                    <hr class="mt-2 mb-5">
+                    <div class="row text-center text-lg-left" >
+
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/1.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/2.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/3.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/4.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/5.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                        <a href="img/galeria/6.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/7.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/7.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12 card-pin col-4 wow fadeIn" data-featherlight-gallery>
+                            <a href="img/galeria/8.jpg" class="d-block mb-4 h-100" data-featherlight="image" data-wow-delay="2.5s">
+                                <img class="img-fluid img-thumbnail" src="img/galeria/8.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 <style scoped>
+    /*@import '../../public/css/default.css';*/
+    /*@import '../../public/css/jquery.fancybox.css'; */
+    /*@import '../../public/css/flexslider.css';*/
     .elemen-bussines div.container-hover{
         
         background-repeat: no-repeat;
@@ -177,8 +234,13 @@
     }*/
     .elemen-bussines>div{
         width: 100%; 
-        padding: 20px; 
+        padding: 10px; 
         background-color: #FFFFFF; 
         border-radius: calc(.25rem - 1px);
-    }
+    }        
+     
+
+
+    
+        
 </style>
