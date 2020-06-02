@@ -30,9 +30,9 @@
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400" href="https://www.isyplus.com">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bxs-plane"></i></div>
-                            <h4 class="title"><a href="https://www.isyplus.com">Venta de Boletos</a></h4>
+                            <h4 class="title"><a href="https://www.isyplus.com" target="_blank">Venta de Boletos</a></h4>
                             <p class="description">Reserva y venta de Boletos online y en ventanillas  </p>
-                            <a style="font-size: 16px;" href="https://www.isyplus.com">www.isyplus.com</a>
+                            <a style="font-size: 16px;" href="https://www.isyplus.com" target="_blank">www.isyplus.com</a>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@
                         <div class="col-lg-6 col-md-12 footer-contact" data-aos="fade-up" data-aos-delay="100">
                             <h4>Nuestras Redes Sociales</h4>
                             <div class="social-links mt-3">
-                                <a href="https://www.facebook.com/coop16deagosto/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="https://www.facebook.com/coop16deagosto/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
                             </div>
                         </div>
                     </div>

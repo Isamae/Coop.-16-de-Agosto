@@ -14,9 +14,11 @@
                         </div>
                         <div class="col-12 col-md-7 mx-auto my-auto" style="padding:0">
                             <div class="text-center style-imagen-n" >
-                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;">“Más que viajar 
-                                <img class="" src="svg-pegado-170.svg" style="width: 30px; height:30px;"  > 
-                                una manera de compartir”</p>
+                                <p style="font-family:'Canter Bold'; font-weight:normal; font-size:42px;">
+                                    <em>“Más que viajar... 
+                                    <i class="far fa-handshake" style="color:#1f5191"></i> 
+                                    ...una manera de compartir”</em>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -48,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <section id="teem" class="teem section-bg">
+        <!-- <section id="teem" class="teem section-bg">
             <div class="container text-center">
                 <div class="section-title" data-aos="fade-up">
                     <h2>Equipo</h2>
@@ -81,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- <section id="clients" class="clients">
             <div class="container">
                 <div class="section-title">
